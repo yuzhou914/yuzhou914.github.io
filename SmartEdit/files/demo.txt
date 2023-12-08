@@ -1,0 +1,13 @@
+Hello,
+
+Thank you for your attention.
+
+We are currently organizing the code that SmartEdit may bring as soon as possible.
+
+Code will be available at https://github.com/TencentARC/SmartEdit.
+
+If you want to support and cheer for us, please star our project. ^_^
+
+Best Regards,
+
+Authors of SmartEdit
