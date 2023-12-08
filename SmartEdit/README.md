@@ -1,5 +1,5 @@
 <!-- ## <div align="center"><b>PhotoMaker</b></div> -->
-<p align="center"> <img src="https://github.com/yuzhou914/yuzhou914.github.io/tree/main/SmartEdit/assets/Logo.jpg" height=100> </p>
+<p align="center"> <img src="https://yuzhou914.github.io/SmartEdit/assets/Logo.jpg" height=100> </p>
 <div align="center">
   
 ## SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models
@@ -14,17 +14,17 @@ If you are interested in our work, please star ⭐ our project.
 
 ### SmartEdit Framework
 <p align="center">
-  <img src="https://github.com/yuzhou914/yuzhou914.github.io/tree/main/SmartEdit/assets/2-SmartEdit.jpg">
+  <img src="https://yuzhou914.github.io/SmartEdit/assets/2-SmartEdit.jpg">
 </p>
 
 ### SmartEdit on Understanding Scenarios
 <p align="center">
-  <img src="https://github.com/yuzhou914/yuzhou914.github.io/tree/main/SmartEdit/assets/3-Understanding.jpg">
+  <img src="https://yuzhou914.github.io/SmartEdit/assets/3-Understanding.jpg">
 </p>
 
 ### SmartEdit on Reasoning Scenarios
 <p align="center">
-  <img src="https://github.com/yuzhou914/yuzhou914.github.io/tree/main/SmartEdit/assets/4-Reasoning.jpg">
+  <img src="https://yuzhou914.github.io/SmartEdit/assets/4-Reasoning.jpg">
 </p>
 
 ### Citation	
