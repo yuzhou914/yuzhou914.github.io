@@ -182,7 +182,6 @@
             </h2>
         </div>
 
-
     <div class="col-md-12 text-center">
         <span class="author-block">
           <a href="https://openreview.net/profile?id=~Yuzhou_Huang1">Yuzhou Huang*</a><sup>1,2</sup>,</span>
@@ -209,13 +208,13 @@
           <a href="https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN">Chao Dong</a><sup>5,7</sup>,</span>
 
         <span class="author-block">
-          <a href="https://myweb.cuhk.edu.cn/ruihuang">Rui Huang</a><sup>6</sup>,</span>
+          <a href="https://sse.cuhk.edu.cn/en/faculty/huangrui">Rui Huang</a><sup>6</sup>,</span>
 
         <span class="author-block">
             <a href="http://zhangruimao.site/">Ruimao Zhang</a><sup>1&#9993</sup>,</span>
 
         <span class="author-block">
-          <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ">Ying Shan</a><sup>2,4</sup>,</span>
+          <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ">Ying Shan</a><sup>2,4</sup></span>
 
         <div class="content text-center">
             <span class="author-block"><sup>1</sup>School of Data Science, Shenzhen Research Institute of Big Data, The Chinese University of Hong Kong, Shenzhen, China,</span>
@@ -233,7 +232,7 @@
                 &nbsp; &nbsp; &nbsp;
             <a target="_blank" href="https://arc.tencent.com/">
             <image src="assets/imgs/logo2-ARC.svg" height="80px"> </a>
-                &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp;
             <a target="_blank" href="https://www.um.edu.mo/">
             <image src="assets/imgs/logo3-Macau.jpg" height="37px"> </a>
 
@@ -258,6 +257,8 @@
                 <font size="+1">
                     We introduce <b>SmartEdit</b>, an instruction-based image editing method assisted by Multimodal Large Language Models, which aims at
                     exploring solutions on complex understanding and reasoning scenarios that are overlooked by previous works.
+                    With the specialized design, our SmartEdit is capable of handling complex understanding
+                    (the instructions that contain various object attributes like location, relative size, color, and in or outside the mirror) and reasoning scenarios.
                     <!--We proposed <b>CustomNet</b>, a zero-shot customization method that can generate harmonious-->
                 </font>
             </p>
@@ -266,64 +267,54 @@
 
 
     <div class="col-md-8 col-md-offset-2">
+        <h2 class="content text-center">
+            <b>SmartEdit on Understanding Scenarios</b>
+        </h2>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2">
         <div class="image-container">
             <div class="image-wrapper">
-                <img src="assets/imgs/1-teaser.jpg" class="img-responsive", width="1000">
+                <img src="assets/imgs/SuppNew1.jpg" class="img-responsive", width="1000">
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2">
+        <h2 class="content text-center">
+            <b>SmartEdit on Reasoning Scenarios</b>
+        </h2>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2">
+        <div class="image-container">
+            <div class="image-wrapper">
+                <img src="assets/imgs/SuppNew2.jpg" class="img-responsive", width="1000">
                 <br>
             </div>
         </div>
     </div>
 
 
-    <div class="col-md-8 col-md-offset-2">
-        <h2 class="content text-center">
-            <b>SmartEdit instruction editing results</b>
-        </h2>
-    </div>
-    <!-- image demo -->
-        <div class="container"> 
-            <div class="col-md-10 col-md-offset-1 ">
-            <div id="results-carousel" class="carousel results-carousel">
-                <div class="item item-1 text-center">
-                <img src="assets/imgs/supp1.jpg", width="800">
-                </div>
-                <div class="item item-2 text-center">
-                <img src="assets/imgs/supp2.jpg", width="800">
-                </div>
-                <div class="item item-3 text-center">
-                <img src="assets/imgs/supp3.jpg", width="800">
-                </div>
-                <div class="item item-4 text-center">
-                <img src="assets/imgs/supp4.jpg", width="800">
-                </div>          
-                <div class="item item-5 text-center">
-                <img src="assets/imgs/supp5.jpg", width="800">
-                </div>
-                <div class="item item-6 text-center">
-                <img src="assets/imgs/supp6.jpg", width="800">
-                </div>
-                <div class="item item-7 text-center">
-                <img src="assets/imgs/supp7.jpg", width="800">
-                </div>
-                <div class="item item-8 text-center">
-                <img src="assets/imgs/supp8.jpg", width="800">
-                </div>
-                <div class="item item-9 text-center">
-                <img src="assets/imgs/supp9.jpg", width="800">
-                </div>
-                <div class="item item-10 text-center">
-                <img src="assets/imgs/supp10.jpg", width="800">
-                </div>
-                <div class="item item-11 text-center">
-                <img src="assets/imgs/supp11.jpg", width="800">
-                </div>
-                <div class="item item-12 text-center">
-                <img src="assets/imgs/supp12.jpg", width="800">
-                </div>
-            </div>
-        </div>
-    </div>
-
+<!--    <div class="col-md-8 col-md-offset-2">-->
+<!--        <h2 class="content text-center">-->
+<!--            <b>SmartEdit instruction editing results</b>-->
+<!--        </h2>-->
+<!--    </div>-->
+<!--        <div class="container"> -->
+<!--            <div class="col-md-10 col-md-offset-1 ">-->
+<!--            <div id="results-carousel" class="carousel results-carousel">-->
+<!--                <div class="item item-1 text-center">-->
+<!--                <img src="assets/imgs/supp1.jpg", height="500", width="800">-->
+<!--                </div>-->
+<!--                <div class="item item-2 text-center">-->
+<!--                <img src="assets/imgs/supp2.jpg", height="500", width="800">-->
+<!--                </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="col-md-4 col-md-offset-4 text-center">
         <ul class="nav nav-pills nav-justified">
@@ -378,14 +369,16 @@
 
     <div class="col-md-8 col-md-offset-2">
         <p class="text-justify">
-            The overall framework of SmartEdit.
+            The overall framework of SmartEdit,
+            which is an instruction-based image editing model that leverages MultiModal Large Language Models (MLLMs)
+            with visual inputs to enhance their understanding and reasoning capabilitie.
         </p>
     </div>
 
 
     <div class="col-md-8 col-md-offset-2 text-center">
         <h3>
-            <b><font size="+5">Comparison Results on Understanding Scenarios </font></b>
+            <b><font size="+5">Comparisons on Understanding Scenarios </font></b>
         </h3>
     </div>
 
@@ -397,10 +390,18 @@
         </div>
     </div>
 
+    <div class="col-md-8 col-md-offset-2">
+        <p class="text-justify">
+            Qualitative comparison on complex understanding scenarios.
+            Compared to other methods, SmartEdit can precisely edit specific objects in images according to instructions,
+            while keeping the content in other areas unchanged.
+        </p>
+    </div>
+
 
     <div class="col-md-8 col-md-offset-2 text-center">
         <h3>
-            <b><font size="+5">Comparison Results on Reasoning Scenarios </font></b>
+            <b><font size="+5">Comparisons on Reasoning Scenarios </font></b>
         </h3>
     </div>
 
@@ -410,6 +411,16 @@
                 <img src="assets/imgs/4-Reasoning.jpg" class="img-responsive", width="1000">
             </div>
         </div>
+    </div>
+
+    <div class="col-md-8 col-md-offset-2">
+        <p class="text-justify">
+            Qualitative comparison on reasoning scenarios.
+            For reasoning scenarios,
+            SmartEdit can effectively utilize the reasoning capabilities of the LLM to identify the corresponding objects,
+            and then edit the objects according to the instructions.
+            Other methods perform poorly in these scenarios.
+        </p>
     </div>
 
 
@@ -427,6 +438,20 @@
         </div>
     </div>
 
+    <div class="col-md-8 col-md-offset-2">
+        <p class="text-justify">
+            The performance of SmartEdit on the MagicBrush test dataset.
+            SmartEdit has good editing effects on the MagicBrush test dataset,
+            not only for single-turn but also for multi-turn.
+        </p>
+    </div>
+
+
+    <div class="col-md-8 col-md-offset-2 text-center">
+        <h3>
+            <b><font size="+5">Citation</font></b>
+        </h3>
+    </div>
 
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
