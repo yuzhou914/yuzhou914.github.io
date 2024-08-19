@@ -1,0 +1,180 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Story3D</title>
+<link href="./files/style.css" rel="stylesheet">
+<script type="text/javascript" src="./files/jquery.mlens-1.0.min.js"></script> 
+<script type="text/javascript" src="./files/jquery.js"></script>
+</head>
+
+
+<!--从这里开始改.../-->
+<!--https://yuzhou914.github.io/Story3D/-->
+<body>
+<div class="content">
+  <div class="logo" style="text-align: center;">
+    <a href="index.html">
+      <img src="./assets/Logo1.png">
+    </a>
+  </div>
+
+  <!-- 0. -->
+  <h1><strong>Story3D-Agent: Exploring 3D Storytelling Visualization with Large Language Models</strong></h1>
+  <p id="authors">
+    <span style="font-size: 22px">
+    <a href="https://openreview.net/profile?id=~Yuzhou_Huang1">Yuzhou Huang</a><sup>1,2#</sup>
+    <a href="https://openreview.net/profile?id=~Yiran_Qin1">Yiran Qin</a><sup>1</sup>
+    <a href="https://shunlinlu.github.io/">Shunlin Lu</a><sup>1</sup>
+    <br>
+    <a href="https://xinntao.github.io/">Xintao Wang</a><sup>2&#x2709;</sup>
+    <a href="https://sse.cuhk.edu.cn/en/faculty/huangrui">Rui Huang</a><sup>1</sup>
+    <a href="https://scholar.google.com/citations?user=4oXBp9UAAAAJ&hl=en/">Ying Shan</a><sup>2</sup>
+    <a href="http://zhangruimao.site/">Ruimao Zhang</a><sup>1&#x2709;</sup>
+    <br>
+
+  <span style="font-size: 18px">
+    <sup>1</sup>The Chinese University of Hong Kong, Shenzhen &nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>2</sup>ARC Lab, Tencent PCG &nbsp;&nbsp;
+
+  <div style="text-align: center;">
+    <span style="font-size: 14px">
+      <sup>#</sup> Intern in ARC lab  &nbsp;&nbsp;&nbsp;&nbsp;
+      &#x2709; Corresponding Authors</span>
+  </div>
+
+
+  <!-- 1. -->
+  <br>
+  <br>
+  <h2 style="text-align:center"><strong>Visualization of Story3D-Agent</strong></h2>
+  <p>
+    <strong>Story3D-Agent</strong> is an innovative LLM-agents system designed for 3D storytelling visualization. 
+    The primary objective of the LLM-agents system is to adeptly transform a provided narrative into a corresponding 3D visualization.
+    In the video below, we illustrate the narrative titled <em>Race Day</em>, represented as a 3D-rendered representation.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/RaceDay_part1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <font size="+2">
+          <p style="text-align: center;">
+            <!-- <a href="https://arxiv.org/abs/2312.06739" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+            <!-- <a href="https://github.com/TencentARC/SmartEdit" target="_blank">[Code]</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+            <a target="_blank">[Code(coming soon)]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+    </font>
+    <p style="text-align: center;">
+    </p>
+</div>
+
+
+<!-- 2. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>Abstract</strong></h2>
+  <p>
+    Traditional visual storytelling is complex, requiring specialized knowledge and substantial resources, yet often constrained by human creativity and creation precision. 
+    While Large Language Models (LLMs) enhance visual storytelling, current approaches often limit themselves to 2D visuals or oversimplify stories through motion synthesis and behavioral simulation, failing to create comprehensive, multi-dimensional narratives. 
+    To this end, we present <strong>Story3D-Agent</strong>, a pioneering approach that leverages the capabilities of LLMs to transform provided narratives into 3D-rendered visualizations. 
+    By integrating procedural modeling, our approach enables precise control over multi-character actions and motions, as well as diverse decorative elements, ensuring the long-range and dynamic 3D representation. 
+    Furthermore, our method supports narrative extension through logical reasoning, ensuring that generated content remains consistent with existing conditions. 
+    We have thoroughly evaluated our Story3D-Agent to validate its effectiveness, offering a basic framework to advance 3D story representation.
+  </p>
+</div>
+
+
+<!-- 3. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>Story3D-Agent Framework</strong></h2>
+  <img class="summary-img" src="./assets/2-Story3D.png" style="width:100%;">
+  <p>
+    Overviews of proposed (a) <strong>Story3D-Agent</strong> and (b) Visual Self-check workflow.
+    Our method involves dividing a story into multiple parts, each serving as an event window. 
+    Using LLMs, we independently determine the corresponding storyline for each clip. 
+    These determinations are then compiled for the overall story model. 
+    Further, the accuracy of the system's determinations is improved by a multi-dimensional error correction mechanism.
+  </p>
+</div>
+
+
+<!-- 4. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>Textual Self-check mechanism of Story3D-Agent</strong></h2>
+  <img class="summary-img" src="./assets/3-TextualSelfCheck.png" style="width:100%;">
+  <p>
+    The director, action, motion, and decoration agents are required to initially produce their respective outputs. 
+    Subsequently, these outputs are evaluated by the textual self-check mechanism. 
+    This mechanism not only confirms the correct responses but also initiates self-reflection and correction for potential errors. 
+    The process continues until all outputs are deemed error-free, at which point the determination process within the current event window is concluded.
+  </p>
+</div>
+
+
+<!-- 5. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>More result of Story3D-Agent</strong></h2>
+  <p>
+    We depict another vivid narrative titled <em>Friendship</em> provided by our Story3D-Agent, which narrates the story about 
+    the univeral theme of friendship in a pre-defined in garden-like scene.
+  </p>
+
+  <video width="100%" controls>
+    <source src="./assets/Friendship_part1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+</div>
+
+
+<!-- 6. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>Story continuation of Story3D-Agent</strong></h2>
+  <p>
+    We present the story continuation outcomes generated by our Story3D-Agent. 
+    Leveraging the rigorous logical reasoning capabilities of LLMs, the newly generated narratives could: 
+    (1) Preserve the coherence and consistency of the contextual story content. 
+    (2) Align with the stipulated conditions for the new narrative. 
+    (3) Implement all generated plots without introducing any misleading elements. 
+  </p>
+
+  <br>
+  <p>
+  The continuation result for the narrative <em>Race Day</em> is provided for illustration.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/RaceDay_part2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <br>
+  <p>
+  The continuation result for the narrative <em>Friendship</em> is provided for illustration.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/Friendship_part2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+</div>
+
+
+<!-- <div class="content">
+  <h2>BibTex</h2>
+  <code> @article{huang2023smartedit,<br>
+  &nbsp;&nbsp;title={SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models},<br>
+  &nbsp;&nbsp;author={Huang, Yuzhou and Xie, Liangbin and Wang, Xintao and Yuan, Ziyang and Cun, Xiaodong and Ge, Yixiao and Zhou, Jiantao and Dong, Chao and Huang, Rui and Zhang, Ruimao and Shan, Ying},<br>
+  &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2312.06739},<br>
+  &nbsp;&nbsp;year={2023}<br>
+  }
+  </code> -->
+
+
+</div>
+<div class="content" id="acknowledgements">
+  <p>
+    Our project page is borrowed from <a href="https://dreambooth.github.io/">DreamBooth</a>.
+    <!-- Recycling a familiar <a href="https://chail.github.io/latent-composition/">template</a> ;). --> 
+  </p>
+</div>
+
+</body>
+</html>
