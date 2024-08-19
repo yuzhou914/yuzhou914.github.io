@@ -1,14 +1,14 @@
 <!-- ## <div align="center"><b>PhotoMaker</b></div> -->
-<p align="center"> <img src="https://yuzhou914.github.io/SmartEdit/assets/Logo.jpg" height=100> </p>
+<p align="center"> <img src="https://yuzhou914.github.io/Story3D-Agent/assets/Logo1.png" height=100> </p>
 <div align="center">
   
-## SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models
-[[Paper](https://arxiv.org/abs/2312.06739)]
-[[Project Page](https://yuzhou914.github.io/SmartEdit/)]
+## Story3D-Agent: Exploring 3D Storytelling Visualization with Large Language Models
+[[Paper](https://yuzhou914.github.io/Story3D-Agent/)]
+[[Project Page](https://yuzhou914.github.io/Story3D-Agent/)]
 [Demo] <be>
 </div>
 
-We are currently organizing the code for SmartEdit may bring as soon as possible.
+<!-- We are currently organizing the code for SmartEdit may bring as soon as possible.
 If you are interested in our work, please star ⭐ our project. 
 <br>
 
@@ -36,4 +36,4 @@ If you are interested in our work, please star ⭐ our project.
   booktitle={arXiv preprint arxiv:2312.06739},
   year={2023}
 }
-```
+``` -->
