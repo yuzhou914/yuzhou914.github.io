@@ -1,0 +1,423 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ConceptMaster</title>
+<link href="./files/style.css" rel="stylesheet">
+<script type="text/javascript" src="./files/jquery.mlens-1.0.min.js"></script> 
+<script type="text/javascript" src="./files/jquery.js"></script>
+</head>
+
+
+<!--从这里开始改.../-->
+<!--https://yuzhou914.github.io/ConceptMaster/-->
+<body>
+<div class="content">
+  <div class="logo" style="text-align: center;">
+    <a href="index.html">
+      <img src="./assets/Logo2.png">
+    </a>
+  </div>
+
+  <!-- 0. -->
+  <h1><strong>ConceptMaster: Multi-Concept Video Customization on Diffusion Transformer Models Without Test-Time Tuning</strong></h1>
+  <p id="authors">
+    <span style="font-size: 22px">
+    <a href="https://openreview.net/profile?id=~Yuzhou_Huang1">Yuzhou Huang</a><sup>1,2,3#</sup>
+    <a href="https://scholar.google.com/citations?user=fWxWEzsAAAAJ&hl=en">Ziyang Yuan</a><sup>2,4#</sup>
+    <a href="https://liuquande.github.io/">Quande Liu</a><sup>2&#x2709;</sup>
+    <a href="https://dblp.org/search/pid/api?q=author:Qiulin_Wang:">Qiulin Wang</a><sup>2</sup>
+    <a href="https://xinntao.github.io/">Xintao Wang</a><sup>2</sup>
+    <br>
+    <a href="http://zhangruimao.site/">Ruimao Zhang</a><sup>1&#x2709;</sup>
+    <a href="https://scholar.google.com/citations?user=P6MraaYAAAAJ&hl=en">Pengfei Wan</a><sup>2</sup>
+    <a href="https://openreview.net/profile?id=~Di_ZHANG3">Di Zhang</a><sup>2</sup>
+    <a href="https://openreview.net/profile?id=~Kun_Gai1">Kun Gai</a><sup>2</sup>
+    <br>
+
+  <span style="font-size: 18px">
+    <sup>1</sup>Sun Yat-sen University &nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>2</sup>Kuaishou Technology &nbsp;&nbsp;&nbsp;&nbsp;
+    <br>
+    <sup>3</sup>The Chinese University of Hong Kong, Shenzhen &nbsp;&nbsp;&nbsp;&nbsp;
+    <sup>4</sup>Tsinghua University &nbsp;&nbsp;&nbsp;&nbsp;
+
+  <div style="text-align: center;">
+    <span style="font-size: 14px">
+      <sup>#</sup> Work done during an internship at KwaiVGI, Kuaishou Technology  &nbsp;&nbsp;&nbsp;&nbsp;
+      &#x2709; Corresponding Authors</span>
+  </div>
+
+
+  <!-- 1. -->
+  <br>
+  <br>
+  <h3 style="text-align:center">
+  <em>
+    We propose ConceptMaster, a Multi-Concept Video Customization (MCVC) method that could create high-quality and concept-consistent customized videos based on given multiple reference images without additional test-time tuning. 
+    Our ConceptMaster is capable of handling diverse customized scenarios, 
+    including but not limited to 1) multiple persons, 2) persons with livings, 3) persons with stuffs, 4) multiple livings, 5) livings with stuffs and 6) persons with both livings and stuffs.
+  </em></h3>
+  <img src="./assets/Teaser.png" class="teaser-gif" style="width:100%;"><br>
+
+  <font size="+2">
+          <p style="text-align: center;">
+            <!-- <a href="https://arxiv.org/abs/2312.06739" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+            <a href="https://yuzhou914.github.io/ConceptMaster/" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <!-- <a target="_blank">[Code(coming soon)]</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+          </p>
+    </font>
+    <p style="text-align: center;">
+    </p>
+</div>
+
+
+<!-- 2. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>Abstract</strong></h2>
+  <p>
+    Text-to-video generation has made remarkable advancements through diffusion models. However, Multi-Concept Video Customization (MCVC) remains a significant challenge. 
+    We identify two key challenges in this task: 1) the identity decoupling problem, where directly adopting existing customization methods inevitably mix attributes when handling multiple concepts simultaneously, and 2) the scarcity of high-quality video-entity pairs, which is crucial for training such a model that represents and decouples various concepts well. 
+    To address these challenges, we introduce ConceptMaster, an innovative framework that effectively tackles the critical issues of identity decoupling while maintaining concept fidelity in customized videos. 
+    Our ConceptMaster innovatively introduces a novel strategy of learning the decoupled multi-concept embeddings and injecting into the diffusion models in a standalone manner. The strategy effectively guarantees the quality of customized videos with multiple identities, even for highly similar visual concepts.
+    To further overcome the scarcity of high-quality MCVC data, we carefully establish a data construction pipeline, which enables systematic collection of precise multi-concept video-entity data across diverse concepts. 
+    A comprehensive benchmark is designed to validate the effectiveness of our model from three critical dimensions: concept fidelity, identity decoupling ability, and video generation quality across six different concept composition scenarios. 
+    Extensive experiments demonstrate that our ConceptMaster significantly outperforms previous approaches for this task, paving the way for generating personalized and semantically accurate videos across multiple concepts.
+  </p>
+</div>
+
+
+<!-- 3. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>ConceptMaster on diverse multi-concept customized scenarios</strong></h2>
+  <p>
+    1) Multiple Persons.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/1_MultiplePersons.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <p>
+    2) Persons with Livings.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/2_PersonsLivings.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <p>
+    3) Persons with Stuffs.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/3_PersonsStuffs.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <p>
+    4) Multiple Livings.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/4_MultipleLivings.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <p>
+    5) Livings with Stuffs.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/5_LivingsStuffs.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+  <p>
+    6) Persons with both Livings and Stuffs.
+  </p>
+  <video width="100%" controls>
+    <source src="./assets/6_Triplets.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video><br>
+
+</div>
+
+
+<!-- 4. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>ConceptMaster framework</strong></h2>
+  <img class="summary-img" src="./assets/ConceptMasterMethod.png" style="width:100%;">
+  <p>
+    Overview of the framework of our proposed <strong>ConceptMaster</strong>. 
+    Our key insight is to learn the decoupled multi-concept embeddings and inject into diffusion transformer models in a standalone manner. 
+    Specifically, the process includes: 1) Extracting comprehensive visual embeddings from given reference images. 
+    2) Incorporating visual representation with corresponding text description of every concept. 
+    3) Introducing a novel multi-concept embeddings injection strategy. 
+    The designed ConceptMaster could efficiently create high-fidelity customized videos during inference without additional parameter tuning, 
+    which significantly provides the potential for the practicality of real-world applications.
+  </p>
+</div>
+
+
+<!-- 1.Comparison-->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>视频切换示例</title>
+    <style>
+        .video-container {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            overflow: hidden;
+        }
+        .video-container video {
+            width: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .arrow {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .left-arrow {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .right-arrow {
+            right: 0;
+            border-radius: 0 3px 3px 0;
+        }
+        .dots {
+            text-align: center;
+            padding: 10px;
+        }
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <!-- 第一个视频框 -->
+        <!-- 1.-->
+        <h2 style="text-align:center;"><strong>Comparing with naive solutions</strong></h2>
+        <!-- 2.-->
+        <div class="video-container" data-videos='["./assets/XXComparison1.mp4", "./assets/XXComparison2.mp4", "./assets/XXComparison3.mp4", "./assets/XXComparison4.mp4"]'>
+            <video width="100%" controls>
+                <source src="./assets/XXComparison1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a class="arrow left-arrow" onclick="switchVideo(this, 'prev')">&#10094;</a>
+            <a class="arrow right-arrow" onclick="switchVideo(this, 'next')">&#10095;</a>
+            <!-- 3.-->
+            <div class="dots">
+                <span class="dot" onclick="currentVideo(this, 0)"></span>
+                <span class="dot" onclick="currentVideo(this, 1)"></span>
+                <span class="dot" onclick="currentVideo(this, 2)"></span>
+                <span class="dot" onclick="currentVideo(this, 3)"></span>
+            </div>
+        <!-- 4.-->
+        <p>
+            Qualitative comparison on multi-concept customization. 
+            We compare several open-sourced multi-concept image customization methods, combining with the image-to-video (I2V) generation model I2VGen-XL, as a naive solution for the MCVC task with our ConceptMaster. 
+            Based on the generation results, our approach clearly demonstrates superior capabilities on concept fidelity, identity decoupling and caption semantic consistency.
+        </p>
+        </div>
+
+        <!-- 第二个视频框 -->
+        <!-- 1.-->
+        <h2 style="text-align:center;"><strong>Comparison with tuning-based method DreamBooth</strong></h2>
+        <!-- 2.-->
+        <div class="video-container" data-videos='["./assets/DreamBooth1.mp4", "./assets/DreamBooth2.mp4"]'>
+            <video width="100%" controls>
+                <source src="./assets/DreamBooth1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a class="arrow left-arrow" onclick="switchVideo(this, 'prev')">&#10094;</a>
+            <a class="arrow right-arrow" onclick="switchVideo(this, 'next')">&#10095;</a>
+            <!-- 3.-->
+            <div class="dots">
+                <span class="dot" onclick="currentVideo(this, 0)"></span>
+                <span class="dot" onclick="currentVideo(this, 1)"></span>
+            </div>
+        <!-- 4.-->
+        <p>
+            Comparison with DreamBooth. We can see that Dreambooth could hardly solve the identity mixing problem. 
+            Additionally, the tuning-based methods always require users to manually collect few-shot training samples for additional parameter-tuning, 
+            which not only can be time-consuming, but collecting same concept in different scenes as training samples is cumbersome, 
+            the situation is more intense for multi-concept video customization task. 
+            Therefore, our ConceptMaster is obviously more practical for real-world applications.
+        </p>
+        </div>
+
+        <!-- 第三个视频框 -->
+        <!-- 1.-->
+        <h2 style="text-align:center;"><strong>Different injection methods of multi-concept references</strong></h2>
+        <!-- 2.-->
+        <div class="video-container" data-videos='["./assets/Technique1.mp4", "./assets/Technique2.mp4"]'>
+            <video width="100%" controls>
+                <source src="./assets/Technique1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a class="arrow left-arrow" onclick="switchVideo(this, 'prev')">&#10094;</a>
+            <a class="arrow right-arrow" onclick="switchVideo(this, 'next')">&#10095;</a>
+            <!-- 3.-->
+            <div class="dots">
+                <span class="dot" onclick="currentVideo(this, 0)"></span>
+                <span class="dot" onclick="currentVideo(this, 1)"></span>
+            </div>
+        <!-- 4.-->
+        <p>
+            While previous methods that the most representative ones include 
+            1) BLIP-Diffusion, which combines visual and textual caption embeddings as the whole condition representation. 
+            2) IP-Adapter, which encodes the whole image as visual embeddings and aggregates into models by a decoupled cross-attention layer.
+            Our key insight is to inject the represented multi-concept embeddings into the diffusion models in a standalone cross-attention layer.
+            Based on the generation results, our ConceptMaster adopts the most suitable manner of the injection of the multi-concept embeddings, which could represent and decouple multiple identities well.
+        </p>
+        </div>
+
+        <!-- 第四个视频框 -->
+        <!-- 1.-->
+        <h2 style="text-align:center;"><strong>Demonstration of the effectiveness of the Q-Former and DAM modules</strong></h2>
+        <!-- 2.-->
+        <div class="video-container" data-videos='["./assets/XXDAM1.mp4", "./assets/XXDAM2.mp4"]'>
+            <video width="100%" controls>
+                <source src="./assets/XXDAM1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <a class="arrow left-arrow" onclick="switchVideo(this, 'prev')">&#10094;</a>
+            <a class="arrow right-arrow" onclick="switchVideo(this, 'next')">&#10095;</a>
+            <!-- 3.-->
+            <div class="dots">
+                <span class="dot" onclick="currentVideo(this, 0)"></span>
+                <span class="dot" onclick="currentVideo(this, 1)"></span>
+            </div>
+        <!-- 4.-->
+        <p>
+            We demonstrate more quantitative results of the effectiveness of the Q-Former and DAM modules, where we conduct several ablation architectures: 
+            1) Replacing the Q-Former by an MLP layer. 
+            2) Removing the DAM module, where only the extracted visual embeddings are further injected into the diffusion models. 
+            3) Replacing DAM by firstly concatenating the visual and textual embeddings along channel dimension, and downsampling the dimension to the original one by an MLP layer. 
+            4) Replacing the intra-pair cross-attention by self-attention.
+            Based on the generation results, our proposed Q-Former and DAM modules would be the best designated architectures to simultaneously represent and decouple multiple references.
+        </p>
+        </div>
+
+    </div>
+
+    <script>
+        function switchVideo(element, direction) {
+            const container = element.closest('.video-container');
+            const videoPlayer = container.querySelector('video');
+            const videoSource = videoPlayer.querySelector('source');
+            const videos = JSON.parse(container.getAttribute('data-videos'));
+            let currentVideoIndex = videos.findIndex(video => video.includes(videoSource.src.split('/').pop()));
+
+            videoPlayer.style.opacity = 0; // Start fade out
+            setTimeout(() => {
+                if (direction === 'next') {
+                    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                } else if (direction === 'prev') {
+                    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+                }
+                videoSource.src = videos[currentVideoIndex];
+                videoPlayer.load();
+                videoPlayer.play();
+                videoPlayer.style.opacity = 1; // Fade in
+                updateDots(container, currentVideoIndex);
+            }, 500); // Match the transition duration
+        }
+
+        function currentVideo(element, index) {
+            const container = element.closest('.video-container');
+            const videoPlayer = container.querySelector('video');
+            const videoSource = videoPlayer.querySelector('source');
+            const videos = JSON.parse(container.getAttribute('data-videos'));
+
+            videoPlayer.style.opacity = 0; // Start fade out
+            setTimeout(() => {
+                videoSource.src = videos[index];
+                videoPlayer.load();
+                videoPlayer.play();
+                videoPlayer.style.opacity = 1; // Fade in
+                updateDots(container, index);
+            }, 500); // Match the transition duration
+        }
+
+        function updateDots(container, activeIndex) {
+            const dots = container.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.className = dot.className.replace(' active', '');
+                if (index === activeIndex) {
+                    dot.className += ' active';
+                }
+            });
+        }
+
+        // Initialize the first dot as active for each video container
+        document.querySelectorAll('.video-container').forEach(container => {
+            updateDots(container, 0);
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- 5. -->
+<div class="content">
+  <h2 style="text-align:center;"><strong>ConceptMaster data collection pipeline</strong></h2>
+  <img class="summary-img" src="./assets/ConceptMasterData.png" style="width:100%;">
+  <p>
+    (a) The overview of multi-concept data collection pipeline. 
+    When dealing with complex scenarios that contain concepts with high visual appearance or textual semantic similarity, 
+    our data pipeline could still extract precise entity images and corresponding labels, 
+    while simply exploit previous methods like Grounded-SAM would introduce a large number of errors and it is difficult to remove these errors through subsequent processing. 
+    (b) The success rate of testing videos comparison between Grounded-SAM and our data pipeline.
+  </p>
+</div>
+
+
+<!-- <div class="content">
+  <h2>BibTex</h2>
+  <code> @article{huang2023smartedit,<br>
+  &nbsp;&nbsp;title={SmartEdit: Exploring Complex Instruction-based Image Editing with Multimodal Large Language Models},<br>
+  &nbsp;&nbsp;author={Huang, Yuzhou and Xie, Liangbin and Wang, Xintao and Yuan, Ziyang and Cun, Xiaodong and Ge, Yixiao and Zhou, Jiantao and Dong, Chao and Huang, Rui and Zhang, Ruimao and Shan, Ying},<br>
+  &nbsp;&nbsp;booktitle={arXiv preprint arxiv:2312.06739},<br>
+  &nbsp;&nbsp;year={2023}<br>
+  }
+  </code> -->
+
+
+</div>
+<div class="content" id="acknowledgements">
+  <p>
+    Our project page is borrowed from <a href="https://dreambooth.github.io/">DreamBooth</a>.
+    <!-- Recycling a familiar <a href="https://chail.github.io/latent-composition/">template</a> ;). --> 
+  </p>
+</div>
+
+</body>
+</html>
